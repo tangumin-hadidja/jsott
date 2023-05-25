@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image-container{
+            display: flex;
+            justify-content: center;
+        }
+        .image{
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="orange.jpg" alt="izobrajenie1" class="image" id="image1">
+        <img src="orangenew.jpg" alt="izobrajenie2" class="image" id="image2">
+    </div>
+
+    <script>
+        var image1 = document.getElementById('image1');
+        var image2 = document.getElementById('image2');
+
+        function swapImages(){
+            var tempSrc = image1.src;
+
+            image1.src = image2.src;
+            image2.src = tempSrc;
+        }
+
+        image1.addEventListener('click', swapImages);
+        image2.addEventListener('click', swapImages);
+    </script>
+</body>
+</html>
